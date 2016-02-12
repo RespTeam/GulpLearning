@@ -1,0 +1,32 @@
+[
+  {
+    "SAP__Origin" : "ECC",
+    "UsernameFrom" : "ALBONNET",
+    "UsernameFullnameFrom" : "Alexandre BONNET",
+    "UsernameTo" : "ALBONNET",
+    "UsernameFullnameTo" : "Alexandre BONNET",
+    "DateFrom" : "\/Date(1411509600000)\/",
+    "DateTo" : "\/Date(1480546800000)\/",
+    "Active" : ""
+  },
+  {
+    "SAP__Origin" : "ECC",
+    "UsernameFrom" : "ALBONNET",
+    "UsernameFullnameFrom" : "Alexandre BONNET",
+    "UsernameTo" : "BROCHET",
+    "UsernameFullnameTo" : "Bruno ROCHET",
+    "DateFrom" : "\/Date(1411509600000)\/",
+    "DateTo" : "\/Date(1418338800000)\/",
+    "Active" : "X"
+  },
+  {
+    "SAP__Origin" : "ECC",
+    "UsernameFrom" : "ALBONNET",
+    "UsernameFullnameFrom" : "Alexandre BONNET",
+    "UsernameTo" : "DTEA",
+    "UsernameFullnameTo" : "David TEA",
+    "DateFrom" : "\/Date(1411509600000)\/",
+    "DateTo" : "\/Date(1425078000000)\/",
+    "Active" : "X"
+  }
+]

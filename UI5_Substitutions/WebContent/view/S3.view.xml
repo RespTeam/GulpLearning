@@ -1,0 +1,55 @@
+<core:View xmlns:core="sap.ui.core" xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m" xmlns:me="sap.me" xmlns:layout="sap.ui.layout"  xmlns:form="sap.ui.layout.form"
+		controllerName="ui5.substitutions.view.S3" xmlns:html="http://www.w3.org/1999/xhtml">
+	<html:style>
+	    .msgWarning {
+	       color: #C2AB0C;
+	       font-style:italic;
+	    }
+   	</html:style>
+	<Page id="pageDetail">
+		<content>
+			<layout:Grid defaultSpan="L12 M12 S12" width="auto" vSpacing="0" hSpacing="0">
+				<layout:content>
+					<form:SimpleForm  editable="true" id="sfSubstitute" maxContainerCols="2" layout="ResponsiveGridLayout" labelSpanL="2" labelSpanM="2"
+        				emptySpanL="4" emptySpanM="4" columnsL="2" columnsM="2">
+						<form:content>
+
+							<Label id="lUsernameTo" required="true" text="{i18n>page.detail.label.userTo}">
+							</Label>
+							<Input id="iUsernameTo" type="Text" value="{SubstituteDetails>/UsernameTo}" valueHelpRequest="onUserValueHelpRequest">
+							</Input>
+
+							<Label id="lActive" text="{i18n>page.detail.label.active}">
+							</Label>
+							<CheckBox id="cbActive" selected="{SubstituteDetails>/Active}">
+							</CheckBox>
+							
+							<Label id="lswitchCalendar" text="{i18n>page.detail.label.switchCalendar}">
+							</Label>
+							<Switch id="swCalendar" change="onSwitchChange"
+								customTextOn="{i18n>page.detail.label.switchCalendarOn}" customTextOff="{i18n>page.detail.label.switchCalendarOff}">
+							</Switch>
+							
+							<Label id="lswitchMsg" visible="false">
+							</Label>
+							<Text id="txtSwitchMsg" visible="false" class="msgWarning"></Text>
+								
+							<Label id="lDateFrom" text="{i18n>page.detail.label.dateFrom}">
+							</Label>
+							<DatePicker id="dpDateFrom" displayFormat="short" dateValue="{SubstituteDetails>/DateFrom}" change="onDateChanged"></DatePicker>
+							
+							<Label id="lDateTo" text="{i18n>page.detail.label.dateTo}">
+							</Label>	
+							<DatePicker id="dpDateTo" displayFormat="short" dateValue="{SubstituteDetails>/DateTo}" change="onDateChanged"></DatePicker>
+								
+						</form:content>
+					</form:SimpleForm>		
+				</layout:content>
+			</layout:Grid>		
+	
+			<me:Calendar id="calDate" selectionMode="RANGE" swipeToNavigate="true" firstDayOffset="1">
+			</me:Calendar>		
+	
+		</content>
+	</Page>
+</core:View>

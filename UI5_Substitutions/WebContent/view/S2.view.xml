@@ -1,0 +1,43 @@
+<core:View xmlns:core="sap.ui.core" xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m"
+		controllerName="ui5.substitutions.view.S2" xmlns:html="http://www.w3.org/1999/xhtml">
+	<html:style>
+		.sapMObjStatus.sapMObjStatusSuccess {
+			padding : 4px 0 4px 0;
+		}
+		.sapMObjStatus.sapMObjStatusSuccess > .sapMObjStatusText{
+			background-color : #31724f;
+			color : white;
+			padding : 4px 9px 4px 9px;
+			border-radius : 18px;
+		}
+		
+		.sapMObjStatus.sapMObjStatusError{
+			padding : 4px 0 4px 0;	
+		}
+		.sapMObjStatus.sapMObjStatusError > .sapMObjStatusText{
+			background-color : #c91717;
+			color : white;
+			padding : 4px 9px 4px 9px;
+			border-radius : 18px;
+		}
+   	</html:style>	
+	<Page id="page" title="{i18n&gt;MASTER_TITLE}">
+		<content>
+			<List id="list" mode="{device&gt;/listMode}" selectionChange="_handleSelect">
+					<ObjectListItem id="masterList" press="_handleItemPress" title="{UsernameFullnameTo}" type="{device&gt;/listItemType}">
+						<attributes>
+							<ObjectAttribute text="{path: 'DateFrom', type:'sap.ca.ui.model.type.Date', formatOptions : { style:'short'}} - {path: 'DateTo', type:'sap.ca.ui.model.type.Date', formatOptions : { style:'short'}}"/>
+<!-- 							<ObjectAttribute text="{path: 'DateTo', type:'sap.ca.ui.model.type.Date', formatOptions : { style:'short'}}"/> -->
+						</attributes>
+				         <firstStatus>
+				            <ObjectStatus state="{path: 'Active', formatter:'ui5.substitutions.Conversions.formatterStatusState'}" text="{path: 'Active', formatter:'ui5.substitutions.Conversions.formatterStatusText'}">
+				            </ObjectStatus>
+				         </firstStatus>
+					</ObjectListItem>
+			</List>
+		</content>
+        <footer>
+            <Bar id="footer"/>
+        </footer>
+	</Page>
+</core:View>
